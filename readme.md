@@ -2,6 +2,8 @@
 
 > Get all HTML tags, with options for filtering deprecated, HTML5 tags, etc.
 
+:bulb: **Please open an issue or a Pull Request** if you notice an HTML tag that
+is not represented by this module.
 
 ## Install
 
@@ -17,6 +19,9 @@ const allHtmlTags = require('all-html-tags');
 
 allHtmlTags();
 //=> ['a', 'abbr', 'address', 'area', ...]
+
+allHtmlTags.describe('canvas');
+//=> 'Used to draw graphics, on the fly, via scripting (usually JavaScript)'
 ```
 
 
@@ -34,9 +39,9 @@ Returns an object with all the tags paired with a description of the tag.
 allHtmlTags.info();
 /*
 {
-	article: 'Defines an article',
-	aside: 'Defines content aside from the page content',
-	audio: 'Defines sound content',
+  article: 'Defines an article',
+  aside: 'Defines content aside from the page content',
+  audio: 'Defines sound content',
   ...
 }
 */
