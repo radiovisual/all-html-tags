@@ -24,16 +24,16 @@ test('lists all tags', (done) => {
 });
 
 test('gets deprecated tags', () => {
-	const tags = htmlTags.deprecated;
-	expect(indexOf.tags('acronym')).toBeGreaterThan(-1);
+	const tags = htmlTags.deprecated();
+	expect(tags['acronym']).toBeTruthy();
 });
 
 test('gets html5 tags', () => {
-	const tags = htmlTags.html5;
-	expect(indexOf.tags('article')).toBeGreaterThan(-1);
+	const tags = htmlTags.html5();
+	expect(tags['article']).toBeTruthy();
 });
 
 test('gets common tags', () => {
-	const tags = htmlTags.common;
-	expect(indexOf.tags('a')).toBeGreaterThan(-1);
+	const tags = htmlTags.common();
+	expect(tags['a']).toBeTruthy();
 });
